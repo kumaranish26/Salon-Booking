@@ -2,6 +2,7 @@ package com.anish.salonbooking.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,6 +28,8 @@ public class User
     @NotBlank(message="email is mandatory")
     private String email;
 
+
+    @Size()
     @NotBlank(message="password is mandatory")
     private String password;
 
